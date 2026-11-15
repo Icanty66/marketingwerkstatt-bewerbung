@@ -65,12 +65,12 @@
   }
 
   const styles = declaration + `<w:styles xmlns:w="${wordNamespace}">
-    <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos" w:cs="Arial"/><w:color w:val="263932"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="de-DE"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:widowControl/><w:spacing w:after="30" w:line="272" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>
+    <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Aptos" w:hAnsi="Aptos" w:cs="Arial"/><w:color w:val="293440"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="de-DE"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:widowControl/><w:spacing w:after="30" w:line="272" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>
     <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>
-    <w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="0" w:after="110"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:color w:val="111915"/><w:sz w:val="42"/></w:rPr></w:style>
-    <w:style w:type="paragraph" w:styleId="Section"><w:name w:val="Abschnitt"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="120" w:after="40"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:color w:val="255947"/><w:sz w:val="25"/></w:rPr></w:style>
-    <w:style w:type="paragraph" w:styleId="Role"><w:name w:val="Position"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:keepNext/><w:spacing w:after="60"/></w:pPr><w:rPr><w:color w:val="255947"/><w:sz w:val="25"/></w:rPr></w:style>
-    <w:style w:type="paragraph" w:styleId="Subject"><w:name w:val="Betreff"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="120" w:after="100"/></w:pPr><w:rPr><w:b/><w:color w:val="172C22"/><w:sz w:val="28"/></w:rPr></w:style>
+    <w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="0" w:after="110"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:color w:val="202933"/><w:sz w:val="42"/></w:rPr></w:style>
+    <w:style w:type="paragraph" w:styleId="Section"><w:name w:val="Abschnitt"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="120" w:after="40"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:color w:val="007C85"/><w:sz w:val="25"/></w:rPr></w:style>
+    <w:style w:type="paragraph" w:styleId="Role"><w:name w:val="Position"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:keepNext/><w:spacing w:after="60"/></w:pPr><w:rPr><w:color w:val="007C85"/><w:sz w:val="25"/></w:rPr></w:style>
+    <w:style w:type="paragraph" w:styleId="Subject"><w:name w:val="Betreff"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:keepNext/><w:keepLines/><w:shd w:fill="ECF5F5"/><w:spacing w:before="120" w:after="100"/></w:pPr><w:rPr><w:b/><w:color w:val="202933"/><w:sz w:val="28"/></w:rPr></w:style>
     <w:style w:type="paragraph" w:styleId="Gap"><w:name w:val="Leerzeile"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:spacing w:before="0" w:after="0" w:line="140" w:lineRule="exact"/></w:pPr><w:rPr><w:sz w:val="14"/></w:rPr></w:style>
   </w:styles>`;
 
