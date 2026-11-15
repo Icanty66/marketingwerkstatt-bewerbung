@@ -1,0 +1,13 @@
+.app-guide{display:grid;grid-template-columns:minmax(190px,1fr) minmax(0,2fr);gap:clamp(18px,4vw,52px);margin:22px 0}
+.app-choices button{display:block;text-align:left;width:100%;padding:12px 16px;border:1px solid #d5deeb;border-radius:10px;margin-top:8px;background:white;color:#142e52;font:inherit;font-weight:700;cursor:pointer}
+.app-choices button small{display:block;font-weight:400;color:inherit}
+.app-choices button[aria-pressed=true]{background:#173658;color:white;box-shadow:inset 4px 0 #f6c437}
+.app-guide button:focus-visible{outline:3px solid #996900;outline-offset:2px}
+.app-instructions{border-radius:14px;background:#f5f8fb;padding:clamp(16px,3vw,30px)}
+.app-instructions article[hidden]{display:none}
+.app-instructions ol{padding-inline-start:22px}
+.app-instructions li{margin:8px 0}
+.app-instructions h4{margin:18px 0 6px}
+.app-example{border-left:3px solid #efbd34;padding:8px 12px;background:white;user-select:all}
+.app-instructions .small{margin-top:14px}
+@media(max-width:690px){.app-guide{grid-template-columns:1fr}}
