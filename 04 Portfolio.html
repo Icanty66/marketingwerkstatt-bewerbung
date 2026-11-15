@@ -55,38 +55,46 @@ figcaption { margin-top:.6rem; font-size:.87rem; color:var(--muted); }
 body [data-field] { overflow-wrap:anywhere; white-space:pre-line; }
 @media(max-width:680px) { .frame { width:calc(100% - 2rem); } .hero-grid,.case-layout { grid-template-columns:1fr; } .hero-grid { gap:1.4rem; } .poster { min-height:15rem; } }
 @media print { body { background:white; color:#162e28; font-size:10pt; } .frame { width:100%; } .editor,nav,.skip { display:none; } .hero { padding:1rem 0; background:white; color:#142e29; } .hero .eyebrow { color:#163b31; } h1 { font-size:34pt; } h2 { font-size:23pt; } .work,.contact,.case { padding:1rem 0 !important; } .poster { min-height:auto; } article { break-inside:avoid; } }
+</style><style id="editorLayout">
+:root{--ink:#182822;--forest:#18533d;--paper:#f5f6f1;--muted:#4c6056;--rule:#d5dfd6;--acid:#cce7b2;--accent:#37724a}
+body{font:15px/1.53 Inter,'Segoe UI',system-ui,sans-serif}.frame{width:min(1160px,calc(100% - 52px))}
+.editor{padding:19px 0 15px;background:#f3f6ef;color:#182822}.toolnav{display:flex;gap:18px;flex-wrap:wrap}.toolnav a{font-size:13px;color:#345b41}.editor h2{font:normal clamp(27px,3vw,40px)/1.14 Georgia,serif;margin:16px 0 3px;letter-spacing:-.045em}.toolintro,.toolcard p{color:#4d6055;margin:5px 0 11px}.toolgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0 11px}.toolcard{padding:14px 15px;background:white;border:1px solid #d5dfd6;border-radius:7px;min-width:0}.toolcard h3{font:650 15px/1.4 'Segoe UI',sans-serif;letter-spacing:0}.toolcard p{font-size:13px}.editor button:not(.minihelp button),.pick{border:1px solid #a8bbab;border-radius:5px;font:650 13px/1.4 'Segoe UI',sans-serif;padding:8px 10px;background:white;color:#18533d;cursor:pointer;display:inline-flex;align-items:center;margin:4px 4px 1px 0}.editor .toolcard button.primary{color:white;background:#18533d;border-color:#18533d}.pick{position:relative}.pick input{width:100%;height:100%;position:absolute;inset:0;opacity:0;cursor:pointer}.pick:focus-within{outline:3px solid #997500}.samplecheck{font-size:13px}.samplecheck input{accent-color:#18533d}.editor #status:not(:empty){margin:9px 0 0;padding:9px 12px;border-left:3px solid #66975d;font-size:14px;background:#fff}.hero{background:#163f2e;padding:clamp(2.5rem,5vw,4.7rem) 0}.hero h1{font-size:clamp(3rem,6.5vw,6.4rem);max-width:none}.case.myproject{border:1px solid #d1dccf;border-top:3px solid #18533d;border-radius:6px;background:white}.poster{background:#e3eacd;border-color:#c2d195}.poster-copy{color:#163f2e}nav a{color:#18533d}
+.minihelp{position:relative;display:inline-flex;vertical-align:middle}.minihelp button{margin:0 .25rem;border:1px solid #9caf9f;background:#f4f8f2;color:#27563e;border-radius:50%;width:25px;height:25px;padding:0;min-height:0;text-align:center;font:700 13px/23px Georgia,serif;cursor:help}.minihelp [role=tooltip]{display:none;position:absolute;bottom:calc(100% + 6px);left:-80px;width:min(235px,72vw);padding:.6rem .8rem;border:1px solid #c1d4bd;border-radius:5px;box-shadow:0 3px 13px #14382422;background:#f6fbf2;color:#223d2e;font:normal 13px/1.45 'Segoe UI',sans-serif;z-index:5;text-align:left}.minihelp:hover [role=tooltip],.minihelp:focus-within [role=tooltip],.minihelp.on [role=tooltip]{display:block}.minihelp.closed [role=tooltip]{display:none}
+@media(max-width:760px){.toolgrid{grid-template-columns:1fr}.frame{width:calc(100% - 32px)}.editor h2{margin-top:13px}.toolcard{padding:11px 13px}.toolintro{font-size:14px}.hero-grid{grid-template-columns:1fr}.minihelp [role=tooltip]{left:-95px}}
+@media print{.editor{display:none}.hero{color:#132e23;background:white}.hero .eyebrow{color:#36573c}}
 </style>
 </head>
 <body>
-<!-- Bearbeitung mit KI: Stelle der KI diese Datei und ausschließlich freigegebene Fakten zur Verfügung. Bitte sie, die sichtbaren Inhalte in data-field zu ersetzen und title anzupassen. Behalte deutsche Beschriftungen, mobile Darstellung, Tastaturbedienung und die lokale Speichern-Funktion. Markiere jede Übungsarbeit als solche. Verwende nur selbst erstellte oder freigegebene Arbeitsproben. Füge echte Mail- oder Projektlinks nur auf ausdrücklichen Wunsch ein. -->
+
 <a class="skip" href="#inhalt">Zum Inhalt</a>
-<div class="editor" id="werkbank"><details class="frame" open>
-<summary>Vorlage bearbeiten und speichern</summary><p><a href="index.html#zeigen">Zur Bewerbungswerkstatt</a> · <a href="veroeffentlichen.html">Hilfe zur Veröffentlichung</a></p>
-<p>Schalte die Texte frei und klicke direkt auf die Stelle, die du ändern möchtest. Felder in eckigen Klammern ersetzt du durch deine Angaben. Die Karte zeigt ein Beispiel für einen Lesekreis. Du kannst sie aus der Lesefassung ausschließen.</p>
-<button class="primary" type="button" id="edit" aria-pressed="false">Texte bearbeiten</button>
-<button type="button" id="save">Bearbeitbare Kopie speichern</button>
-<button type="button" id="share">Lesefassung speichern</button>
-<p><label>Eigene Arbeitsprobe als Bild (optional) <input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp"></label> <button type="button" id="removeImage">Bild entfernen</button></p><p>Wähle zum Beispiel einen eigenen Aushang. Beschneide das Bild so, dass nur der freigegebene Ausschnitt zu sehen ist. Die Datei wird direkt in deine Kopie eingebettet.</p><p><label><input type="checkbox" id="sample" checked> Musterarbeit aus der Lesefassung ausschließen</label></p>
-<p>Speichere deine bearbeitbare Kopie vor dem Schließen. Öffne die Lesefassung zur Kontrolle, bevor du sie weitergibst. Die Datei öffnet sich direkt in deinem Browser.</p><p id="status" role="status"></p>
-</details></div>
+<section class="editor" id="werkbank" aria-labelledby="editorTitle"><div class="frame">
+<div class="toolnav"><a href="index.html">← Bewerbungsatelier</a><a href="veroeffentlichen.html">Hilfe zur Veröffentlichung ↗</a></div>
+<h2 id="editorTitle">Meine Portfolioseite bearbeiten</h2>
+<p class="toolintro">Diese Vorlage kannst du direkt bearbeiten. Du kannst dein Portfolio auch in deinem eigenen ChatGPT Projekt entwerfen. Wähle in deinem ChatGPT Pro Konto das schnelle Standardmodell und bitte um eine selbständige HTML Seite mit deinem Text und einer freigegebenen Arbeitsprobe.</p>
+<div class="toolgrid">
+<div class="toolcard"><h3>Texte und Arbeitsprobe</h3><p>Trage deinen Namen, einen eigenen Beitrag und den gewünschten Kontakt ein.</p><button class="primary" type="button" id="edit" aria-pressed="false">Texte bearbeiten</button></div>
+<div class="toolcard"><h3>Bild ergänzen <span class="minihelp"><button type="button" aria-label="Hilfe zur Bilddatei" aria-describedby="bildinfo">i</button><span role="tooltip" id="bildinfo">Verwende einen eigenen oder freigegebenen Ausschnitt. Das Bild bleibt in deiner HTML Datei. JPG, PNG und WebP bis 12 MB sind möglich.</span></span></h3><p>Du kannst einen fertigen Entwurf als Bild zeigen.</p><label class="pick">Bild wählen<input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp"></label><button type="button" id="removeImage">Bild entfernen</button></div>
+<div class="toolcard"><h3>Kopie sichern <span class="minihelp"><button type="button" aria-label="Hilfe zu den beiden Fassungen" aria-describedby="kopieinfo">i</button><span role="tooltip" id="kopieinfo">Die bearbeitbare Kopie ist für spätere Änderungen. Die Lesefassung enthält die fertige Seite für Arbeitgeber und heisst index.html.</span></span></h3><button type="button" id="save">Bearbeitbare Kopie speichern</button><button class="primary" type="button" id="share">Lesefassung speichern</button></div>
+</div><label class="samplecheck"><input type="checkbox" id="sample" checked> Musterarbeit aus der Lesefassung ausschliessen</label><p id="status" role="status"></p></div></section>
 <header><div class="bar frame"><span class="mark">Mein Portfolio für Marketing</span><nav aria-label="Inhalt"><a href="#arbeiten">Arbeitsproben</a><a href="#kontakt">Kontakt</a></nav></div></header>
 <main id="inhalt">
 <section class="hero" aria-label="Profil"><div class="frame hero-grid"><div><p class="eyebrow" data-field>[Schwerpunkt] · [Region]</p><h1 data-field>[Vorname Nachname]</h1></div><p class="hero-copy" data-field>[Für welche Stelle interessierst du dich? Welche eigene Arbeit zeigt, was du schon kannst? Schreibe zwei kurze Sätze.]</p></div></section>
 <section class="frame work" id="arbeiten"><h2>Arbeitsproben</h2>
-<!-- BEISPIEL START: Dieses vollständige Muster gehört nicht zu deiner Berufserfahrung. Es kann in der Lesefassung weggelassen werden. -->
+
 <article class="case case-layout" id="muster"><div><p class="label">Muster für einen fiktiven Lesekreis</p><h3>Zum ersten Mal im Lesekreis</h3>
 <dl><dt>Aufgabe</dt><dd>Wer zum ersten Mal kommt, fragt sich oft, ob alle das Buch schon gelesen haben müssen. Die Einladung soll das klären und den Einstieg erleichtern.</dd><dt>Gestaltung</dt><dd>Die erste Zeile spricht Menschen an, die das Buch noch nicht kennen. Der kurze Text erklärt, wie der Abend abläuft. Am Ende stehen Termin, Treffpunkt und Anmeldung.</dd><dt>Ergebnis und Testidee</dt><dd>Auf der Karte steht mein Entwurf. Ich würde ihn drei Personen zeigen, die noch nie dabei waren. Meine Fragen wären: Kannst du diesmal ohne Vorbereitung kommen? Wie meldest du dich an? Der Test steht noch aus.</dd></dl></div>
 <figure><div class="poster"><span class="eyebrow">Textentwurf · Einladung</span><p class="poster-copy">Das Buch noch nicht gelesen?</p><p>Komm gern trotzdem in unseren Lesekreis. Wir lesen einen kurzen Abschnitt gemeinsam und sprechen darüber. Du kannst einfach zuhören oder deine Gedanken teilen.</p><p class="poster-foot">Wir treffen uns am [Datum] um [Uhrzeit] in [Ort]. Melde dich über [Kontakt oder Link] an.</p></div><figcaption>Beispiel für eine Einladung. Datum und Ort sind hier noch offen.</figcaption></figure>
 </article>
-<!-- BEISPIEL ENDE -->
-<!-- EIGENES PROJEKT START: Der gesamte article-Block kann für eine zweite echte Arbeitsprobe kopiert werden. -->
+
+
 <article class="case myproject"><p class="label" data-field>[Eigenprojekt, Studienarbeit oder freigegebener Auftrag]</p><h3 data-field>[Projekttitel mit konkretem Ergebnis]</h3>
 <div class="case-layout"><dl><dt>Ausgangslage und Zielgruppe</dt><dd data-field>[Wer hatte welches Problem? Was sollte dein Beitrag ermöglichen?]</dd><dt>Mein Beitrag</dt><dd data-field>[Welche Inhalte, Entscheidungen oder Arbeitsschritte kamen von dir? Nenne andere Beteiligte. Wenn du KI verwendet hast, beschreibe kurz wofür.]</dd></dl><dl><dt>Arbeitsprobe</dt><dd data-field>[Füge einen kurzen Ausschnitt aus deinem eigenen Entwurf ein, etwa den Titel und zwei Sätze deiner Landingpage.]</dd><dt>Ergebnis und nächster Schritt</dt><dd data-field>[Was wurde erstellt, erprobt oder verbessert? Wie hast du es geprüft? Falls die Arbeit bisher nur ein Konzept ist, sag das hier.]</dd></dl></div><figure id="ownFigure" hidden style="margin-top:24px"><img id="ownImage" alt="" style="display:block;max-width:100%;max-height:70vh;object-fit:contain"><figcaption data-field>[Was zeigt dieser Ausschnitt?]</figcaption></figure></article>
-<!-- EIGENES PROJEKT ENDE -->
+
 </section>
 <section class="last contact" id="kontakt"><div class="frame"><h2>Kontakt</h2><p data-field>[Name] · [Adresse für berufliche Anfragen]</p><p data-field>[Optional: Link zum freigegebenen beruflichen Profil oder zur Arbeitsprobe]</p></div></section>
 </main>
 <script>
+document.querySelectorAll('.minihelp button').forEach(function(button){const help=button.parentElement;button.addEventListener('click',function(){const expanded=help.classList.contains('on');help.classList.toggle('on',!expanded);help.classList.toggle('closed',expanded)});help.addEventListener('pointerenter',()=>help.classList.remove('closed'));button.addEventListener('blur',()=>help.classList.remove('on','closed'));button.addEventListener('keydown',function(event){if(event.key==='Escape'){help.classList.remove('on');help.classList.add('closed')}})});
 const editor = document.querySelector('#werkbank');
 const editButton = document.querySelector('#edit');
 const status = document.querySelector('#status');
@@ -97,6 +105,7 @@ editButton.addEventListener('click', () => {
     if (active) field.setAttribute('contenteditable','plaintext-only');
     else field.removeAttribute('contenteditable');
   });
+  if(active)document.querySelector('h1[data-field]')?.focus();
   editButton.setAttribute('aria-pressed', String(active));
   editButton.textContent = active ? 'Bearbeitung beenden' : 'Texte bearbeiten';
   status.textContent = active ? 'Texte sind freigegeben. Zum Bearbeiten einen Text auswählen.' : 'Die Bearbeitung ist beendet. Du kannst jetzt deine Kopie speichern.';
@@ -120,7 +129,13 @@ imageFile.addEventListener('change',async ()=>{
 });
 document.getElementById('removeImage').addEventListener('click',()=>{imageRequest++;ownFigure.hidden=true;ownImage.removeAttribute('src');imageFile.value='';status.textContent='Das Bild wurde entfernt.'});
 function saveCopy(readOnly) {
-  const copy = document.documentElement.cloneNode(true);
+  const copy = document.createElement('html');
+  copy.lang = 'de';
+  const cleanHead = document.createElement('head');
+  document.head.querySelectorAll('meta[charset], meta[name=viewport], meta[name=robots], title, style').forEach(node => cleanHead.appendChild(node.cloneNode(true)));
+  const cleanBody = document.createElement('body');
+  document.body.querySelectorAll(':scope > .skip, :scope > #werkbank, :scope > header, :scope > main, :scope > script').forEach(node => cleanBody.appendChild(node.cloneNode(true)));
+  copy.append(cleanHead, cleanBody);
   copy.querySelectorAll('[contenteditable]').forEach(field => field.removeAttribute('contenteditable'));
   copy.querySelector('body').classList.remove('editing');
   const sampleBox = editor.querySelector('#sample');
@@ -136,10 +151,9 @@ function saveCopy(readOnly) {
     copy.querySelectorAll('[data-field]').forEach(x=>{x.removeAttribute('data-field')});
     copy.querySelector('meta[name=robots]')?.remove();
     copy.querySelector('#werkbank').remove();
-    copy.querySelector('script').remove();
+    copy.querySelectorAll('script, .minihelp, [contenteditable], [data-gramm], grammarly-extension, grammarly-desktop-integration').forEach(node=>node.remove());
   } else {
-    copy.querySelector('#werkbank a[href^="index.html"]')?.remove();
-    copy.querySelector('#werkbank a[href="veroeffentlichen.html"]')?.parentElement.remove();
+    copy.querySelector('.toolnav')?.remove();
     copy.querySelector('#sample').toggleAttribute('checked',sampleBox.checked);
     copy.querySelector('#edit').setAttribute('aria-pressed','false');
     copy.querySelector('#edit').textContent='Texte bearbeiten';
@@ -160,3 +174,4 @@ document.querySelector('#save').addEventListener('click',()=>saveCopy(false));
 document.querySelector('#share').addEventListener('click',()=>saveCopy(true));
 </script>
 </body></html>
+
