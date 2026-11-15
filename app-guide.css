@@ -11,3 +11,32 @@
 .app-example{border-left:3px solid #efbd34;padding:8px 12px;background:white;user-select:all}
 .app-instructions .small{margin-top:14px}
 @media(max-width:690px){.app-guide{grid-template-columns:1fr}}
+
+/* The workspace begins directly after the three preparation steps. */
+body:has(.work-area){background:#edf0f3}
+main:has(.work-area){background:white}
+.work-area{position:relative;isolation:isolate;padding:clamp(22px,4vw,52px) 0 32px}
+.work-area:before{content:"";position:absolute;inset:0;z-index:-1;background:#edf0f3;box-shadow:0 0 0 100vmax #edf0f3;clip-path:inset(0 -100vmax)}
+body:has(.work-area) .unifiedfooter{background:#edf0f3;margin-block:0}
+.work-area .section{margin-block:0 24px}
+.work-area .panel,.work-jumps{border:1px solid #d4dae1;border-radius:16px;background:white;padding:clamp(18px,3.2vw,40px)}
+.work-area :is(h2,h3){text-wrap:balance}
+.work-area .fields{gap:14px 22px}
+.work-area :is(input:not([type=checkbox]),select,textarea){border-radius:7px}
+.work-area .row,.work-area .toolsrow{gap:9px}
+.work-jumps{margin:0 0 26px;border-left:4px solid #f1bd31}
+.work-jumps strong{font-size:1.2rem}
+.work-jumps div{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:12px}
+.work-jumps a{color:#193951;text-underline-offset:4px}
+.work-area #promptbau,.work-area #match .quietbox{padding:clamp(14px,2.4vw,28px);margin-top:24px;background:#f4f6f8;border-radius:12px}
+.work-area .scoregrid{row-gap:12px}
+.work-area #bewerbung .route4 a{background:transparent;border-top:3px solid #edbc32;padding-inline:0;margin-right:12px}
+.work-area #bewerbung .panels3 article{border-radius:12px;padding:18px;border-color:#d8dfe7}
+.work-area #bewerbung .toolsrow,.work-area #projekte .row{padding-top:16px;margin-top:16px;border-top:1px solid #d9dfe6}
+.work-area #plan .planedit{border-top:1px solid #d9dfe6;margin-top:22px}
+.work-area #plan h3{margin-top:26px;margin-bottom:12px}
+.work-area #plan fieldset label{padding:7px 10px;background:#f3f5f7;color:#24384a}
+.work-area #plan fieldset label:has(:checked){background:#193654;color:white}
+.work-area .schedule span{border-radius:10px;padding:10px;background:#eff3f6}
+.work-area .schedule span:last-child{background:#ffedb8}
+@media(max-width:640px){.work-area .scoregrid{row-gap:6px}.work-jumps div{display:grid;grid-template-columns:1fr 1fr}.work-area .section{margin-bottom:16px}}
