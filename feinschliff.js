@@ -14,3 +14,20 @@ if (roadSteps.length) {
  }, {rootMargin:'-12% 0px -45% 0px'});
  roadSteps.forEach(step => roadObserver.observe(step));
 }
+
+const waiting = document.getElementById('analysisWait');
+if (waiting) {
+ function updateWaiting() {
+  const hasRole = Boolean(document.getElementById('role').value.trim());
+  const hasCV = Boolean(document.getElementById('cv').value.trim());
+  waiting.hidden = hasRole && hasCV;
+  waiting.parentElement.classList.toggle('waiting', !waiting.hidden);
+  waiting.querySelector('p').textContent = hasRole ? 'Dein Beruf ist gewählt. Für die Auswertung fehlt noch dein Lebenslauf.' : 'Die Auswertung wartet auf deine erste Eingabe.';
+  const link = waiting.querySelector('a');
+  link.href = hasRole ? '#profil' : '#berufswahl';
+  link.textContent = hasRole ? 'Lebenslauf in Schritt 2 einlesen →' : 'Beruf in Schritt 1 eintragen →';
+ }
+ document.addEventListener('input',updateWaiting);
+ new MutationObserver(updateWaiting).observe(document.getElementById('tasks'),{childList:true});
+ updateWaiting();
+}
