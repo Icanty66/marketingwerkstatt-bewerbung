@@ -12,3 +12,8 @@ body textarea{field-sizing:content!important;height:auto!important;max-height:no
 .papier{padding-bottom:0!important;background:#fff!important;align-items:stretch}.papier img{align-self:end;display:block;object-fit:contain;object-position:center bottom;mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent 100%);mask-composite:intersect}
 
 #analysisWait:not([hidden]){display:flex;align-items:center;gap:clamp(12px,3vw,38px);background:#fafcfe}#analysisWait svg{width:clamp(78px,17vw,160px);flex:none}#analyse [hidden]{display:none!important}.papier{grid-template-columns:.86fr 1.14fr!important}.papier img{width:100%;height:auto;mask-image:none}@media(max-width:680px){.papier{grid-template-columns:1fr!important}.papier img{height:auto;max-height:320px}}
+/* Preserve the doorway glow and contact shadow; soften only the trailing light. */
+.papier img {
+  mask-image: linear-gradient(to bottom, black 0%, black 80%, rgba(0,0,0,.94) 85%, rgba(0,0,0,.72) 90%, rgba(0,0,0,.32) 95%, transparent 100%);
+  mask-composite: add;
+}
