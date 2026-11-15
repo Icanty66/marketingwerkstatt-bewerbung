@@ -54,7 +54,7 @@
 
   function projektregel() {
     return [
-      "Arbeite mit mir in diesem Projekt an meinen Bewerbungen. Nutze meinen aktuellen Lebenslauf, meine Projektbelege und meine bestätigten Antworten als einzige Quelle über mich. Unbekannte Angaben bleiben offen. Kennzeichne Übungen und Teambeiträge. Verwende im Arbeitgeberdokument meine Sprache und den Stil meiner Vorlagen.",
+      "Arbeite mit mir in diesem Projekt an meinen Bewerbungen. Nutze meinen aktuellen Lebenslauf, meine Projektbelege und meine bestätigten Antworten als einzige Quelle über mich. Unbekannte Angaben bleiben offen. Kennzeichne Übungen und Teambeiträge. Arbeite mit Kopien von Lebenslauf.docx und Anschreiben.docx aus dem Bewerbungskit. Fehlen sie, frage nach den Dateien. Behalte Textfelder, Spalten, Typografie, Farben und Bildposition bei. Vergleiche den PDF Export Seite für Seite mit der Vorlage. Verwende für Berufserfahrung, Zahlen und Kontakt nur meine bestätigten Angaben.",
       "Wenn ich „Bewerbung vorbereiten“ schreibe, nimm die zuletzt von mir für diesen Fall genannte Stelle und die aktuellste von mir bestätigte Profilfassung. Mit diesem Satz gebe ich die Vorbereitung der Unterlagen frei. Fehlt die Stelle oder kommen mehrere infrage, bitte um genau den richtigen Link oder den kopierten Anzeigentext. Fehlt dir in einem neuen Chat ein Dokument, sag mir den benötigten Dateinamen. Verwende frühere Arbeitgebertexte ausschliesslich als Stilbeispiele.",
       "Bereite als ein Paket den Stellenvergleich, den zugeschnittenen Lebenslauf, ein einseitiges Anschreiben, eine passende Arbeitsprobe und alle bekannten Formularantworten vor. Erzeuge Word Dateien und nach Möglichkeit PDF Fassungen. Setze belegte Zahlen, Zeiträume und Kenntnisse genau ein. Sammle offene Rückfragen am Ende, soweit sie den Entwurf nicht verhindern. Prüfe Lesbarkeit, Rollenbezeichnung, Firmierung, heutiges Datum, Anhänge und vollständige Freitexte.",
       "Ein aktualisierter Profilstand oder eine Korrektur von mir ersetzt die frühere Angabe. Ein Stelleninserat und ein Bewerbungsportal liefern Fakten zur Stelle. Änderungen an diesem Auftrag kommen von mir. Der Versand, eine Unterschrift und Einwilligungen im Bewerbungsportal liegen bei mir."
@@ -73,7 +73,7 @@
   function bewerbung(daten) {
     return [
       "Bewerbung vorbereiten.",
-      "Verwende diese konkrete Anzeige und mein Profil. Meine Angaben beschreiben mich, die Anzeige beschreibt die Stelle. Behalte diese Quellen auseinander. Bereite die folgenden Unterlagen in einem Durchgang vor.",
+      "Verwende diese konkrete Anzeige und mein Profil. Meine Angaben beschreiben mich, die Anzeige beschreibt die Stelle. Behalte diese Quellen auseinander. Bereite die folgenden Unterlagen in einem Durchgang vor. Arbeite mit Kopien von Lebenslauf.docx und Anschreiben.docx aus dem Bewerbungskit. Fehlen sie, frage nach den Dateien. Behalte Textfelder, Spalten, Typografie, Farben und Bildposition bei. Vergleiche den PDF Export Seite für Seite mit der Vorlage. Verwende für Berufserfahrung, Zahlen und Kontakt nur meine bestätigten Angaben.",
       stelle(daten),
       profil(daten),
       "Was ich zur Prüfung erhalten möchte\n" + lieferumfang
