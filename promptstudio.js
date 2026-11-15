@@ -1,0 +1,12 @@
+(()=>{
+const get=id=>document.getElementById(id), field=id=>get(id).value.trim();
+const out=get('readyPrompt'), aim=get('aim');let edited=!!out.value;
+function build(){
+ const kind=aim.value||'ideas';
+ let text=kind==='ideas'?'Lies meinen Lebenslauf. Schlage bis zu fünf realistische Berufe vor. Zeige je Beruf eine typische Aufgabe, einen Beleg aus meiner bisherigen Erfahrung und eine offene Anforderung. Beziehe Schulprojekte, Ehrenamt und private Projekte ein, soweit ich sie genannt habe. Frage mich zum Schluss, welche zwei Berufe ich näher ansehen möchte. '+(field('cv')?'Mein Lebenslauf:\n'+field('cv'):'Bitte mich zuerst um meinen Lebenslauf.'):makePrompt(kind);
+ const info=[['Berufe, die mich interessieren','role'],['Region','region'],['Rahmenbedingungen','constraints'],['Meine Bitte','requestNote'],['Ton','voice']].filter(([,id])=>field(id)).map(([label,id])=>label+': '+field(id));
+ out.value=text+'\n\n'+info.join('\n');edited=false;
+}
+function sync(){get('nextHint').textContent=['work','bewerbung'].includes(aim.value)?'Tipp: Ergänze im Bereich „Eine Stelle prüfen“ die Stellenanzeige. Ihre Angaben fliessen in diesen Prompt ein.':'Du kannst mit wenigen Angaben starten. Fehlende Punkte darf ChatGPT erfragen.';if(!edited)build();get('studioState').textContent=edited?'Deine Textänderungen bleiben erhalten. Mit „Prompt aus meinen Angaben übernehmen“ ersetzt du sie durch die aktuelle Vorlage.':''}
+document.addEventListener('input',e=>{if(e.target===out){edited=true;return}if(e.target.matches('[data-stored]'))sync()});document.addEventListener('change',e=>{if(e.target!==out&&e.target.matches('[data-stored]'))sync()});get('compose').onclick=()=>{edited=false;sync();out.dispatchEvent(new Event('change',{bubbles:true}))};get('clipPrompt').onclick=async()=>{if(await copyText(out.value))get('studioState').textContent='Kopiert. Füge den Text jetzt in deinem ChatGPT Projekt ein.'};get('savePrompt').onclick=()=>saveFile(out.value,'Mein Prompt.txt');document.querySelectorAll('[data-open]').forEach(a=>a.onclick=()=>{aim.value=a.dataset.open;sync()});new MutationObserver(sync).observe(get('importStatus'),{childList:true,subtree:true});sync()
+})();
