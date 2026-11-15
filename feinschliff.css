@@ -10,3 +10,5 @@ body textarea{field-sizing:content!important;height:auto!important;max-height:no
 #analysisWait{margin:14px 0;padding:14px 20px;border-left:4px solid #ffcf32}
 .actualpreview{display:block;width:clamp(135px,18vw,215px);height:240px;object-fit:contain;object-position:center;background:#fff;box-shadow:0 3px 15px #182c481b;margin-bottom:12px}
 .papier{padding-bottom:0!important;background:#fff!important;align-items:stretch}.papier img{align-self:end;display:block;object-fit:contain;object-position:center bottom;mask-image:linear-gradient(to right,transparent,#000 8%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 78%,transparent 100%);mask-composite:intersect}
+
+#analysisWait:not([hidden]){display:flex;align-items:center;gap:clamp(12px,3vw,38px);background:#fafcfe}#analysisWait svg{width:clamp(78px,17vw,160px);flex:none}#analyse [hidden]{display:none!important}.papier{grid-template-columns:.86fr 1.14fr!important}.papier img{width:100%;height:auto;mask-image:none}@media(max-width:680px){.papier{grid-template-columns:1fr!important}.papier img{height:auto;max-height:320px}}

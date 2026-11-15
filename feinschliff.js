@@ -21,6 +21,7 @@ if (waiting) {
   const hasRole = Boolean(document.getElementById('role').value.trim());
   const hasCV = Boolean(document.getElementById('cv').value.trim());
   waiting.hidden = hasRole && hasCV;
+  document.getElementById('analysisDetails').hidden = !waiting.hidden;
   waiting.parentElement.classList.toggle('waiting', !waiting.hidden);
   waiting.querySelector('p').textContent = hasRole ? 'Dein Beruf ist gewählt. Für die Auswertung fehlt noch dein Lebenslauf.' : 'Die Auswertung wartet auf deine erste Eingabe.';
   const link = waiting.querySelector('a');
